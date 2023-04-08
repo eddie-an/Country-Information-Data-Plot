@@ -12,7 +12,7 @@ For this program to run, the numpy and matplotlib modules must be installed on t
 ---
 
 # How the program runs
-<br>
+
 The program reads multiple CSV files that contain information regarding each countries, its continental region, land size, endangered species, etc.
 The user is prompted to select from a list of choices where they can filter by UN region, UN-sub region or just by the name of the country.
 <br>
