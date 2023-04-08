@@ -127,23 +127,44 @@ def main():
     # Lists created from country_data
     country_list = list(country_data[1:,0])
     UN_region_list = list(country_data[1:,1])
+    UN_region_user_choice = np.unique(UN_region_list)
     UN_sub_region_list = list(country_data[1:,2])
+    UN_sub_region_user_choice = np.unique(UN_sub_region_list)
     sq_KM_list = list(country_data[1:,3])
     while(True): # Finding country
-        user_input= input("Please enter one of the following: country name, UN region, UN sub-region, land size in sq km:\n")
-        if user_input in country_list: # User input is country name
-            row_index = find_countries(user_input, country_list, country_list)
+        user_input= input("Please enter one of the following: country name, UN region, UN sub-region:\n")
+        if user_input == "country name": # User input is country name
+            while(True):
+                print("These are the countries to choose from: ")
+                print(country_list)
+                user_input= input("Please enter one of the above countries\n")
+                if user_input in country_list:
+                    row_index = find_countries(user_input, country_list, country_list)
+                    break
+                else:
+                    print("Invalid input. Please try again.")
             break
-   
-        elif user_input in UN_region_list: # User input is region
-            row_index = find_countries(user_input, UN_region_list, country_list)
+        elif user_input == "UN region": # User input is UN region
+            while(True):
+                print("These are the UN regions to choose from:\n")
+                print(UN_region_user_choice)
+                user_input= input("Please enter one of the above UN regions\n")
+                if user_input in UN_region_list:
+                    row_index = find_countries(user_input, UN_region_list, country_list)
+                    break
+                else:
+                    print("Invalid input. Please try again.")
             break
-   
-        elif user_input in UN_sub_region_list: # User input is sub region
-            row_index = find_countries(user_input, UN_sub_region_list, country_list)
-            break
-        elif user_input in sq_KM_list: # User input is sq KM of the country
-            row_index = find_countries(user_input, sq_KM_list, country_list)
+
+        elif user_input == "UN sub-region": # User input is UN sub-region
+            while(True):
+                print("These are the UN sub-regions to choose from:\n")
+                print(UN_sub_region_user_choice)
+                if user_input in UN_sub_region_list:
+                    row_index = find_countries(user_input, UN_sub_region_list, country_list)
+                    break
+                else:
+                    print("Invalid input. Please try again.")
             break
         else: # User input is invalid
             print("Invalid input. Please try again.")
