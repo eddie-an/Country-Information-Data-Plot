@@ -160,6 +160,7 @@ def main():
             while(True):
                 print("These are the UN sub-regions to choose from:\n")
                 print(UN_sub_region_user_choice)
+                user_input= input("Please enter one of the above UN sub-regions\n")
                 if user_input in UN_sub_region_list:
                     row_index = find_countries(user_input, UN_sub_region_list, country_list)
                     break
