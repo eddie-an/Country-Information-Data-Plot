@@ -19,6 +19,6 @@ The user is prompted to select from a list of choices where they can filter by U
 ---
 After the country has been selected, a collection of bar graphs and line graphs that visualizes information about a country's population and endangered species can be viewed.
 <br>
-![Bar Graph](Bar_graph.png)
+![Bar Graph](Bar_graph.png)f
 <br>
 ![Line Graph](Line_graph.png)
