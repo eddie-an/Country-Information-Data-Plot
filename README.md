@@ -1,5 +1,5 @@
 # Country_Information_Data_Plot
-A console (terminal-based) application that imports multiple CSV files and displays their data using NUMPY and MATPLOTLIB
+A console (terminal-based) application that imports multiple CSV files and displays their data using NUMPY and MATPLOTLIB.
 For this program to run, the numpy and matplotlib modules must be installed on the compiler, and the 3 CSV files must be in the same directory that the python file is located in.
 
 # What I learned
